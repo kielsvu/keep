@@ -16,6 +16,9 @@ interface VaultDao {
     fun getAllEntries(): Flow<List<VaultEntry>>
 
 
+    @Query("SELECT * FROM vault_entries ORDER BY is_favorite DESC, service_name ASC, account_label ASC")
+    suspend fun getAllEntriesOnce(): List<VaultEntry>
+
     @Query("SELECT * FROM vault_entries WHERE id = :id")
     suspend fun getEntryById(id: String): VaultEntry?
 
