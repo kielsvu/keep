@@ -4,6 +4,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
 import androidx.compose.animation.togetherWith
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.core.animateDpAsState
@@ -15,6 +16,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Lock
@@ -26,11 +28,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.keepr.data.model.VaultCategory
 import com.keepr.ui.components.KeeprButton
+import com.keepr.ui.components.pressScale
 import com.keepr.ui.components.ServiceIcon
 import com.keepr.ui.components.VaultEntryItem
 import com.keepr.ui.theme.*
