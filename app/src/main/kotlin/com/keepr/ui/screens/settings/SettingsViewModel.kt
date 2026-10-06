@@ -136,7 +136,7 @@ class SettingsViewModel(
         viewModelScope.launch {
             try {
                 val entries = mutableListOf<com.keepr.data.model.VaultEntry>()
-                vaultRepository.getAllEntries().first { list ->
+                vaultRepository.observeEntries().first { list ->
                     entries.addAll(list)
                     true
                 }

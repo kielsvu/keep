@@ -1,5 +1,8 @@
 package com.keepr.ui.screens.settings
 
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 
 import android.content.Intent
